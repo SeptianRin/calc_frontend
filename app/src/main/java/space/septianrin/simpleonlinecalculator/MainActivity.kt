@@ -6,15 +6,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.PopupMenu
 import android.widget.Toast
-import io.reactivex.rxjava3.disposables.CompositeDisposable
 import space.septianrin.simpleonlinecalculator.Constant.ADD
 import space.septianrin.simpleonlinecalculator.Constant.DIVIDE
 import space.septianrin.simpleonlinecalculator.Constant.MULTIPLY
 import space.septianrin.simpleonlinecalculator.Constant.SPLITEQ
 import space.septianrin.simpleonlinecalculator.Constant.SPLITNUM
-import space.septianrin.simpleonlinecalculator.Constant.SUBSTRACT
+import space.septianrin.simpleonlinecalculator.Constant.SUBTRACT
 import space.septianrin.simpleonlinecalculator.databinding.ActivityMainBinding
-import space.septianrin.simpleonlinecalculator.networking.RetrofitBuilder
 
 class MainActivity : AppCompatActivity(), MainInterface.View {
     private var presenter = MainPresenter(this)
@@ -36,8 +34,8 @@ class MainActivity : AppCompatActivity(), MainInterface.View {
                 binding.dropdownHello.text = ADD
                 true
             }
-            add(SUBSTRACT).setOnMenuItemClickListener {
-                binding.dropdownHello.text = SUBSTRACT
+            add(SUBTRACT).setOnMenuItemClickListener {
+                binding.dropdownHello.text = SUBTRACT
                 true
             }
 

@@ -13,7 +13,7 @@ import space.septianrin.simpleonlinecalculator.Constant.DIVIDE
 import space.septianrin.simpleonlinecalculator.Constant.MULTIPLY
 import space.septianrin.simpleonlinecalculator.Constant.SPLITEQ
 import space.septianrin.simpleonlinecalculator.Constant.SPLITNUM
-import space.septianrin.simpleonlinecalculator.Constant.SUBSTRACT
+import space.septianrin.simpleonlinecalculator.Constant.SUBTRACT
 import space.septianrin.simpleonlinecalculator.databinding.ActivityMainBinding
 import space.septianrin.simpleonlinecalculator.models.BackendResponse
 import space.septianrin.simpleonlinecalculator.networking.RetrofitBuilder
@@ -65,7 +65,7 @@ class MainPresenter(
                         view?.showToast(activity.applicationContext, it.message)
                     })
             }
-            SUBSTRACT -> {
+            SUBTRACT -> {
                 requestSubstract(
                     inputJson,
                     {
@@ -172,7 +172,7 @@ class MainPresenter(
         onSuccess: (BackendResponse) -> Unit,
         onError: (Throwable) -> Unit
     ) {
-        apiUrl.substract(frontendRequest)
+        apiUrl.subtract(frontendRequest)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(onSuccess, onError)

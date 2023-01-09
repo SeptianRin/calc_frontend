@@ -15,8 +15,8 @@ interface ApiUrl {
     ): Single<BackendResponse>
 
     @Headers("Content-Type: application/json")
-    @POST("substract")
-    fun substract(
+    @POST("subtract")
+    fun subtract(
         @Body frontendRequest: JsonObject
     ): Single<BackendResponse>
 
