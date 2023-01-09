@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Simple Online Calculator</string>
+    <string name="input_parameter">Input…</string>
+    <string name="add">Add</string>
+    <string name="calculate">Calculate</string>
+    <string name="simple_online_calculator">Simple Online Calculator</string>
+    <string name="welcome_to_simple_online_calculator">Welcome to Simple Online Calculator \n\n To use this calculator is simple, input your number separated by comma (,) and pick operation you needed</string>
+</resources>
